@@ -1,17 +1,17 @@
 package models;
 
 public class Dog extends Animals {
-   private static int count;
-
-    public Dog(String Animal, String name, int run, int swim){
-        this.Animal = Animal;
-        this.name = name;
-        this.run = run;
-        this.swim = swim;
-        count++; // підрахунок загальної кількості собак;
+    public Dog(String name){
+        super();
     }
 
-    public static int getCount(){ // метод для підрахунку загальної кількості собак;
-        return count;
+    @Override
+    public void run(int distance) {
+        System.out.println("Dog ran " + distance + "m");
+    }
+
+    @Override
+    public void swim(int distance) {
+        System.out.println("Dog swam " + distance + "m");
     }
 }
